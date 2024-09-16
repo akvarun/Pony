@@ -6,9 +6,9 @@ The size of the work unit, which refers to the number of sub-problems a worker r
 
 For the given implementation, the work unit size is determined as follows:
 
-- ** For ` n <= 500` **: The work unit size is set to `n`, meaning each worker handles all tasks within a single request. This approach simplifies the distribution of tasks and minimizes the overhead associated with managing multiple requests.
+- For ` n <= 500` **: The work unit size is set to `n`, meaning each worker handles all tasks within a single request. This approach simplifies the distribution of tasks and minimizes the overhead associated with managing multiple requests.
 
-- ** For `n > 500` **: The work unit size is set to the ceiling of the square root of `n`, calculated using the `MathUtils.ceil` function. Specifically, the chunk size is `({ceil}sqrt{n})`, which balances the workload across workers and optimizes performance by ensuring that each worker processes a manageable number of tasks. This approach effectively distributes the total workload while keeping task management overhead low.
+- For `n > 500` **: The work unit size is set to the ceiling of the square root of `n`, calculated using the `MathUtils.ceil` function. Specifically, the chunk size is `({ceil}sqrt{n})`, which balances the workload across workers and optimizes performance by ensuring that each worker processes a manageable number of tasks. This approach effectively distributes the total workload while keeping task management overhead low.
 
 ### Rationale for Work Unit Size
 
