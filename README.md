@@ -1,6 +1,3 @@
-# Name : Varun Aiyaswamy Kannan , UFID : 31555559
-# Name : Hamsavahan Harikrishnan , UFID : 63019438
-
 ## Size of the Work Unit for Optimal Performance
 
 The size of the work unit, which refers to the number of sub-problems a worker receives in a single request from the boss, was determined to optimize performance based on empirical analysis and performance testing.
